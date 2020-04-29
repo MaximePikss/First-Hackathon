@@ -21,7 +21,5 @@ export default ({ close }) => (
       With these two buttons (on bottom), you can pick a destination. You can
       choose a country or just let the random makes you a surprise :)
     </div>
-    <button>Random !</button>
-    <button> Choose my destination</button>
   </div>
 );
