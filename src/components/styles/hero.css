@@ -3,6 +3,11 @@ body {
   height: 100%;
   background-color: black;
 }
+.Overflow {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
 .hero {
   /*background-image: url(/images/background-01.png);
@@ -10,12 +15,18 @@ body {
   background-size: contain;*/
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+  position: relative;
 }
 
-.button {
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero button {
   padding: 5px;
   margin: 5px;
   background: coral;
-  animation-name: rubberBand;
   border-radius: 10%;
 }
