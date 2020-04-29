@@ -1,8 +1,17 @@
+@font-face {
+  font-family: "DisposableDroidBB";
+  src: url("/fonts/DisposableDroidBB.ttf");
+}
+
 body {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: pink;
+  background-image: url(https://images.unsplash.com/photo-1533424922832-a76b7d3563d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
+
 .Overflow {
   overflow: hidden;
   display: flex;
@@ -16,22 +25,100 @@ body {
   height: 100vh;
   width: 100vw;
   /*overflow: hidden;*/
-  /*position: relative*/
+  position: absolute;
 }
 
-/*.hero img {
+.hero img {
   width: 100%;
-  height: auto;
-}*/
+  height: 100vh;
+}
 
-.container {
+.buttonclass {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+  padding-left: 5px;
+  top: 65%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2px 5px 5px 5px;
+  margin: 5px 5px;
+}
+
+label {
+  font-family: "DisposableDroidBB";
+  font-size: 1.2em;
+}
+
+/*.container {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
+  display: block;
+  background-color: red;
+  border-radius: 10px;
+  height: 150px;
+  width: 25%;
+  text-align: center;
+}
+*/
+
+.button {
+  display: block;
+  padding: 15px;
+  margin: 15px;
+  background: rgb(99, 199, 41);
+  border-radius: 50%;
 }
 
-.hero button {
-  padding: 5px;
-  margin: 5px;
-  background: coral;
-  border-radius: 10%;
+button {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+button:hover {
+  animation-name: rubberBand;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
 }

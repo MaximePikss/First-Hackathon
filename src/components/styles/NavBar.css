@@ -1,0 +1,14 @@
+.container {
+  position: absolute;
+  display: flex;
+}
+
+.buttonclass {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  /*width: 55%;*/
+  bottom: 0;
+  right: 200px;
+  color: white;
+}
