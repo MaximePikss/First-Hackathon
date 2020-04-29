@@ -1,8 +1,8 @@
 import React from 'react';
+import './styles/countries.css';
 
-
-function Countries() {
-
+function Countries({countries, webcam}) {
+/*
 const countries =  [
     ['BE', 'Belgium'],
     ['FR', 'France'],
@@ -17,7 +17,7 @@ const countries =  [
     ['JP', 'Japan'],
     ['ZM', 'South Africa'],
 ];
-
+*/
 
 
 //const countryList = getCountries()
@@ -33,22 +33,25 @@ for (let i=0; i >=countries.length; i++) {
 
 console.log(listFullCountry)
 */
+
+const web = `https://webcams.windy.com/webcams/public/embed/player/1000550952/day`
 return(
-    <div>
-     
-{
+    <div className="container">
+    {
     countries.map(country => {
         return(
             <ul>
-            <li>{country[1]}</li>
+                <a href={web}>
+                    <li>{country.name}</li>
+                </a>
             </ul>
         ) 
     })
-}
+    }
 
     </div>
 )
 
 }
 
-export default Countries
+export default Countries;
