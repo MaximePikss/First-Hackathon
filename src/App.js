@@ -1,6 +1,10 @@
+
 import React, { useState, useEffect } from "react";
 import Countries from './components/Countries';
 import axios from 'axios';
+import Hero from "./components/Hero";
+import "./components/styles/hero.css";
+import "./App.css";
 
 function App() {
 
@@ -47,6 +51,7 @@ function App() {
   }
   
   return (
+
     <div>
 
       <h1>titre</h1>
@@ -56,6 +61,10 @@ function App() {
 
 
     </div>
+
+    <>
+      <Hero />
+    </>
   );
 }
 
