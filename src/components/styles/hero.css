@@ -1,0 +1,21 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.hero {
+  /*background-image: url(/images/background-01.png);
+  background-repeat: no-repeat;
+  background-size: contain;*/
+  height: 100vh;
+  width: 100vw;
+}
+
+.button {
+  padding: 5px;
+  margin: 5px;
+  background: coral;
+  animation-name: rubberBand;
+  border-radius: 10%;
+}

@@ -1,12 +1,13 @@
 import React from "react";
-import Wilder from "./components/Wilder";
+import Hero from "./components/Hero";
+import "./components/styles/hero.css";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hi there !</h1>
-      <Wilder />
-    </div>
+    <>
+      <Hero />
+    </>
   );
 }
 
