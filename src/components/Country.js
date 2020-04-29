@@ -7,8 +7,9 @@ function Country({ webcams}) {
         <div className="container">
         {
         webcams.map(webcam => {
-           
-            
+            return (
+                {webcam}
+            )
             
         })
         }
@@ -16,8 +17,6 @@ function Country({ webcams}) {
         <iframe src={web} />
         </div>
     )
-    
-
 
 }
 

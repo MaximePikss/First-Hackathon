@@ -25,6 +25,9 @@ function App() {
     getCountries();
   }, []);
 
+  useEffect(() => {
+    getWebcams();
+  }, []);
   const getCountries = () => {
     axios
       .get(

@@ -20,7 +20,7 @@ return(
         ) 
     })
     }
-
+    <iframe src={web}/>
     </div>
 )
 
