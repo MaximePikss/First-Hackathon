@@ -18,15 +18,13 @@ const countries =  [
     ['ZM', 'South Africa'],
 ];
 
-/*
-getCountries() = () => {
-    countries.map((i) => {return countries[i]} )
-};
 
-const countryList = getCountries()
-*/
+
+//const countryList = getCountries()
+
 
 // NOTE : j'ai testé un loop car j'arrive pas à map. Au final ça ne donne rien... Je vous laisse faire la suite...
+/*
 const listFullCountry = [] 
 
 for (let i=0; i >=countries.length; i++) {
@@ -34,10 +32,19 @@ for (let i=0; i >=countries.length; i++) {
 }
 
 console.log(listFullCountry)
-
+*/
 return(
     <div>
-       {listFullCountry}
+     
+{
+    countries.map(country => {
+        return(
+            <ul>
+            <li>{country[1]}</li>
+            </ul>
+        ) 
+    })
+}
 
     </div>
 )
