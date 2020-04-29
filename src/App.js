@@ -1,15 +1,16 @@
-
 import React, { useState, useEffect } from "react";
 import Countries from './components/Countries';
 import axios from 'axios';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Hero from "./components/Hero";
+import Country from './components/Country'
 import "./components/styles/hero.css";
 import "./App.css";
 
 function App() {
 
   const [ countries, setCountries ] = useState([]);
-  const [ webcam, setWebcam ] = useState([]);
+  const [ webcams, setWebcams ] = useState([]);
 
   
   // Declared 2 const : one the the ID and the other for the country
@@ -37,34 +38,36 @@ function App() {
     });
   }
 
-  const getWebcam = () =>{
+  const getWebcams = () =>{
     axios
       .get(
         "https://api.windy.com/api/webcams/v2/list?show=webcams:image,location,player&key=XB2hPUk4tkDnV4Bs4HMHroBr83HawNUd"
       )
       .then((response) => response.data)
       .then((data) => {
-        setWebcam(data.webcams[0].id);
+        setWebcams(data.webcams);
         
-        
+        //webcams.location.country_code
   });
   }
   
   return (
-
     <div>
-
-      <h1>titre</h1>
-      
-      
-     <Countries countries={countries} webcam={webcam} />
-
-
+      <BrowserRouter>
+        <Route exact path="/">
+          <Hero />
+        </Route>
+        <Route exact path="/list">
+          <Countries countries={countries}/>
+        </Route>
+        <Route path="/webcam">
+          <Country webcams={webcams}/>
+        </Route>
+      </BrowserRouter>
+     
+     
     </div>
 
-    <>
-      <Hero />
-    </>
   );
 }
 

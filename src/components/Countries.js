@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles/countries.css';
+import { Link } from "react-router-dom";
 
-function Countries({countries, webcam}) {
+function Countries({countries}) {
 
 const web = `https://webcams.windy.com/webcams/public/embed/player/1000550952/day`
 return(
@@ -10,9 +11,11 @@ return(
     countries.map(country => {
         return(
             <ul>
+                <Link to="/webcam">
                 <a href={web}>
                     <li>{country.name}</li>
                 </a>
+                </Link>
             </ul>
         ) 
     })
