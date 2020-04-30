@@ -34,7 +34,7 @@ export default function Webcam() {
 
   let destinationId = idArray[randomNumber];
 
-  const url = `https://webcams.windy.com/webcams/public/embed/player/${destinationId}/day`;
+  const url = `https://webcams.windy.com/webcams/public/embed/player/${destinationId}/day?autoplay=1`;
 
   useEffect(() => {
     getWindy();
@@ -53,7 +53,7 @@ export default function Webcam() {
 
   return (
     <div>
-      <iframe src={url} className="Webcam" title="cam" />
+      <iframe src={url} className="Webcam" title="cam" allow="autoplay" />
     </div>
   );
 }

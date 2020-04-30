@@ -8,14 +8,13 @@
 }
 .Webcam {
   position: absolute;
-  width: 55%;
-  height: 55%;
-  z-index: 1;
-  right: 22%;
-  bottom: 33%;
+  width: 80%;
+  height: 80%;
+  z-index: -1;
+  right: 10%;
 }
 
 .Hero {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
