@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "DisposableDroidBB";
+  src: url("/fonts/DisposableDroidBB.ttf");
+}
+
 .buttonclass {
   position: fixed;
   bottom: 0;

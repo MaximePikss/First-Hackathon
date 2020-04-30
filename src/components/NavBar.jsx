@@ -1,16 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/NavBar.css";
 
 export default function NavBar() {
   return (
     <div className="buttonclass">
-      <button className="button" onClick="" title="Random!"></button>
+      <Link to="/list">
+        <button className="button" onClick="Webcam" title="Random!"></button>
+      </Link>
       <label>Random destination!</label>
-      {/*<button
-        className="button"
-        onClick=""
-        title="Choose your destination"
-      ></button>*/}
     </div>
   );
 }
