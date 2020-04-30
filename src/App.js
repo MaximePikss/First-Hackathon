@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Countries from './components/Countries';
 import axios from 'axios';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+//import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Hero from "./components/Hero";
 import Country from './components/Country'
 import "./components/styles/hero.css";
 import "./App.css";
+import Popup from "reactjs-popup";
+import PopupContent from "./components/PopupContent";
 
 function App() {
 
@@ -55,7 +57,14 @@ function App() {
   }
   
   return (
-    <div>
+    <>
+      <Popup modal defaultOpen={true}>
+        {(close) => <PopupContent close={close} />}
+      </Popup>
+      <Hero />
+    
+
+        {/* <div>
       <BrowserRouter>
         <Route exact path="/">
           <Hero />
@@ -69,7 +78,8 @@ function App() {
       </BrowserRouter>
      
      
-    </div>
+    </div>*/}
+  </>
 
   );
 }
