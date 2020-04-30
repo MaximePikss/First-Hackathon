@@ -73,9 +73,6 @@ function App() {
       </div>*/}
       </div>
       <NavBar />
-      <Popup modal defaultOpen={true}>
-        {(close) => <PopupContent close={close} />}
-      </Popup>
     </>
   );
 }

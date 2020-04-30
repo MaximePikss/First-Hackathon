@@ -5,6 +5,7 @@
 label {
   font-family: "DisposableDroidBB";
   font-size: 1.5em;
+  color: white;
 }
 
 .buttonclass {
@@ -14,10 +15,9 @@ label {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: white;
   margin: 0 auto;
   width: 15%;
-  height: 18%;
+  height: 30%;
   background-color: rgb(74, 36, 88);
   border-radius: 10px;
   margin-left: 40%;
