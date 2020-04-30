@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/NavBar.css";
+import Webcam from "./Webcam";
 
 export default function NavBar() {
   return (

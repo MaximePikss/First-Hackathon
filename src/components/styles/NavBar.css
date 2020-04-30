@@ -2,6 +2,10 @@
   font-family: "DisposableDroidBB";
   src: url("/fonts/DisposableDroidBB.ttf");
 }
+label {
+  font-family: "DisposableDroidBB";
+  font-size: 1.5em;
+}
 
 .buttonclass {
   position: fixed;
