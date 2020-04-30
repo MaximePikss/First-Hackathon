@@ -1,14 +1,71 @@
-.container {
-  position: absolute;
-  display: flex;
-}
-
 .buttonclass {
+  position: fixed;
+  bottom: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
-  /*width: 55%;*/
-  bottom: 0;
-  right: 200px;
+  flex-direction: column;
   color: white;
+  margin: 0 auto;
+  width: 15%;
+  height: 18%;
+  background-color: rgb(74, 36, 88);
+  border-radius: 10px;
+  margin-left: 40%;
+}
+
+.button {
+  display: block;
+  padding: 20px;
+  margin: 20px;
+  background: rgb(99, 199, 41);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+button {
+  border: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+button:hover {
+  animation-name: rubberBand;
+  background-color: rgb(58, 172, 13);
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
 }
