@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Countries from './components/Countries';
-import axios from 'axios';
+import Countries from "./components/Countries";
+import axios from "axios";
 //import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Hero from "./components/Hero";
 //import Country from "./components/Country";
@@ -9,7 +9,6 @@ import "./App.css";
 import Webcam from "./components/Webcam";
 import Popup from "reactjs-popup";
 import PopupContent from "./components/PopupContent";
-
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -55,14 +54,13 @@ function App() {
 
   return (
     <>
-       <Popup modal defaultOpen={true}>
+      <Popup modal trigger={<button>Click Me</button>}>
         {(close) => <PopupContent close={close} />}
       </Popup>
       <div className="container">
-
         <Webcam />
         <Hero />
-      {/*<div>
+        {/*<div>
         <BrowserRouter>
           <Route exact path="/">
             <Hero />
@@ -75,8 +73,8 @@ function App() {
           </Route>
         </BrowserRouter>
       </div>*/}
-    </div>
-  </>
+      </div>
+    </>
   );
 }
 
