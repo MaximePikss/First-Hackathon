@@ -52,7 +52,7 @@ export default function Webcam() {
   };
 
   return (
-    <div>
+    <div className="butt">
       <iframe src={url} className="Webcam" title="cam" />
     </div>
   );
