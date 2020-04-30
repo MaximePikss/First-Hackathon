@@ -7,14 +7,12 @@ export default function Hero() {
     <div className="hero">
       <img className="hero" src="/images/background-01.png" alt="spaceship" />
       <div className="buttonclass">
-        <div className="btn">
-          <button className="button" onClick=""></button>
-          <label>Random!</label>
-        </div>
-        <div className="btn">
-          <button className="button" onClick=""></button>
-          <label>Choose your destination</label>
-        </div>
+        <button className="button" onClick="" title="Random!"></button>
+        <button
+          className="button"
+          onClick=""
+          title="Choose your destination"
+        ></button>
       </div>
     </div>
   );
